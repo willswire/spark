@@ -26,5 +26,14 @@ qemu-system-microblazeel  qemu-system-rx
 riscv32-none-none-eabi, riscv64-none-none-eabi, i686-unknown-none-elf, armv7-apple-none-macho, armv6m-none-none-eabi, aarch64-none-none-elf, wasm64-unknown-none-wasm, arm64-apple-macos, i686-unknown-windows-msvc, x86_64-unknown-none-elf, x86_64-unknown-windows-msvc, arm64-apple-none-macho, armv7-none-none-eabi, armv7em-none-none-eabi, arm64e-apple-macos, x86_64-apple-macos, armv6-apple-none-macho, armv6m-apple-none-macho, wasm32-unknown-none-wasm, armv7em-apple-none-macho, armv6-none-none-eabi
 
 # Running commands
-swiftc -target riscv32-none-none-eabi -enable-experimental-feature Embedded -wmo main.swift -c -o spark_riscv32
-qemu-system-riscv32 -machine virt -nographic -bios none -kernel spark_riscv32
+
+swiftc -target riscv64-none-none-eabi -enable-experimental-feature Embedded -wmo src/main.swift -c -o spark
+
+# Links
+
+https://developer.apple.com/videos/play/wwdc2024/10197/ <-- watch this!!!
+https://github.com/google/syzkaller
+https://github.com/utmapp/mac.getutm.app/issues/31
+https://people.debian.org/~gio/dqib/
+https://github.com/apple/swift/blob/main/docs/EmbeddedSwift/UserManual.md
+https://github.com/swiftlang/swift-evolution/blob/main/visions/embedded-swift.md
